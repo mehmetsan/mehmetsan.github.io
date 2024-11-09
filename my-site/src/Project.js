@@ -14,8 +14,6 @@ function Project({ topic }) {
 
         }}
             onClick={() => {
-                console.log(topicData.page);
-
                 setDisplayPage(topicData.page)
             }}
         >
