@@ -1,0 +1,11 @@
+{
+    "abdi": {
+        "title": "ABDI Drinking Game",
+        "paragraph": "A mobile adaptation of the popular drinking card game ABDI. This is a hobby project, that I have prepared in Swift but as of now I haven't published on App Store yet. The app is a rather simple game that doesn't rely on data collection, so it basically works on static content.",
+        "keywords": [
+            "Swift",
+            "Mobile Development"
+        ],
+        "page": "abdi"
+    }
+}
