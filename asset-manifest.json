@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mehmetsan.github.io/static/css/main.74bed2b8.css",
+    "main.js": "/mehmetsan.github.io/static/js/main.91ebe02a.js",
+    "index.html": "/mehmetsan.github.io/index.html",
+    "main.74bed2b8.css.map": "/mehmetsan.github.io/static/css/main.74bed2b8.css.map",
+    "main.91ebe02a.js.map": "/mehmetsan.github.io/static/js/main.91ebe02a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74bed2b8.css",
+    "static/js/main.91ebe02a.js"
+  ]
+}
