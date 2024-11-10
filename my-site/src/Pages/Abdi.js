@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../index';
 
-
 function Abdi() {
-    const { setDisplayPage, setShowBanner } = useContext(UserContext);
+    const { baseUrl } = useContext(UserContext);
 
     return (
         <div style={{ display: "flex", flexDirection: "column", marginTop: "10px", backgroundColor: "#f0e09c", borderRadius: "20px" }}>
@@ -16,7 +15,6 @@ function Abdi() {
 
             {/* Texts */}
             <div style={{ display: "flex", flexDirection: "column", gap: "20px", padding: "60px 120px 60px 120px" }}>
-
                 {/* Description Section */}
                 <div style={{ display: "flex", flexDirection: "column" }}>
                     <span style={{ display: "flex", fontWeight: "700", fontSize: "32px", textDecoration: "underline" }}>
@@ -33,17 +31,24 @@ function Abdi() {
                     <span
                         style={{ display: "flex", marginBottom: "20px", color: "blue", fontWeight: "600", cursor: "pointer" }}
                         onClick={() => {
-                            setShowBanner(false);
-                            setDisplayPage("abdi_privacy");
-                        }}>
+                            window.location.href = baseUrl + '/abdi/privacy'
+                        }}
+                    >
                         Privacy Policy
                     </span>
 
+                </div>
+
+                {/* Screenshots Section */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                    <span style={{ display: "flex", fontWeight: "700", fontSize: "32px", textDecoration: "underline" }}>
+                        Screenshots
+                    </span>
                     <div style={{ display: "flex", flexDirection: "row", gap: "30px" }}>
-                        <img style={{ display: "flex", width: "200px" }} src="/images/screenshot_1.png" alt="" />
-                        <img style={{ display: "flex", width: "200px" }} src="/images/screenshot_2.png" alt="" />
-                        <img style={{ display: "flex", width: "200px" }} src="/images/screenshot_3.png" alt="" />
-                        <img style={{ display: "flex", width: "200px" }} src="/images/screenshot_4.png" alt="" />
+                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_1.png"} alt="" />
+                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_2.png"} alt="" />
+                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_3.png"} alt="" />
+                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_4.png"} alt="" />
                     </div>
                 </div>
 
@@ -59,12 +64,9 @@ function Abdi() {
                         common state property. No user data is collected inside the app.
                     </p>
                 </div>
-
             </div>
-
         </div>
-    )
-
+    );
 }
 
 export default Abdi;

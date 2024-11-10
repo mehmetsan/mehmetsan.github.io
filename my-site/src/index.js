@@ -1,25 +1,29 @@
 import React, { useState, createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
 export const UserContext = createContext();
 
 const RootComponent = () => {
-  const [displayPage, setDisplayPage] = useState("home");
   const [showBanner, setShowBanner] = useState(true);
+  const [baseUrl, setBaseUrl] = useState("/mehmetsan.github.io");
+
 
 
   const contextValue = {
-    displayPage,
-    setDisplayPage,
     showBanner,
-    setShowBanner
+    setShowBanner,
+    baseUrl,
+    setBaseUrl
   };
 
 
   return (
     <UserContext.Provider value={contextValue}>
-      <App />
+      <BrowserRouter basename={baseUrl}>
+        <App />
+      </BrowserRouter>
     </UserContext.Provider>
   );
 };

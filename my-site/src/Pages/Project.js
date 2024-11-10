@@ -1,20 +1,19 @@
 
-import topicsData from "./data.json"
+import topicsData from "../data.json"
 import React, { useContext } from 'react';
-import { UserContext } from './index';
+import { UserContext } from '../index';
 
 function Project({ topic }) {
     const topicData = topicsData[topic]
-    const { setDisplayPage } = useContext(UserContext);
+    const { baseUrl } = useContext(UserContext);
 
     return (
         <div style={{
             display: "flex", flexDirection: "column", width: "48%", minHeight: "300px", cursor: "pointer",
             backgroundColor: "#D7E278", borderRadius: "20px", padding: "20px", fontFamily: "'Comic Sans MS', 'Comic Sans', cursive"
-
         }}
             onClick={() => {
-                setDisplayPage(topicData.page)
+                window.location.href = baseUrl + '/' + topicData.page;
             }}
         >
             {/* Topic Part */}

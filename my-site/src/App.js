@@ -1,57 +1,25 @@
-import Project from "./Project";
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
 import Abdi from "./Pages/Abdi";
-import AbdiPrivacyPolicy from "./Pages/AbdiPrivacyPolicy"
-import React, { useContext } from 'react';
-import { UserContext } from './index';
-import "./App.css"
+import AbdiPrivacyPolicy from "./Pages/AbdiPrivacyPolicy";
 
+import "./App.css";
 
 function App() {
-  const { displayPage, showBanner } = useContext(UserContext);
-
   return (
     <div style={{ display: "flex", flexDirection: "column", width: "90%", margin: "auto" }}>
 
-      {/* Banner Part */}
-      {showBanner && (
-        <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "200px", backgroundColor: "#3FB4C4", borderRadius: "20px" }}>
-          <div style={{ display: "flex", height: "70%" }}>
-            <span style={{ display: "flex", margin: "auto auto auto auto", "fontSize": "32px" }}>
-              Mehmet Sanisoglu Portfolio
-            </span>
-          </div>
-          <div style={{ display: "flex", height: "30%" }}>
-            <i style={{ display: "flex", margin: "auto auto auto auto", "fontSize": "20px" }}>
-              Graphic design is my passion
-            </i>
-          </div>
-        </div>
-      )}
+      <Routes>
+        {/* Route for Home */}
+        <Route path="/" element={<Home />} />
 
-      {/* Projects */}
-      {displayPage === "home" && (
-        <div style={{ display: "flex", flexDirection: "column", marginTop: "50px", gap: "30px" }}>
-          {/* Project Row */}
-          <div style={{ display: "flex", flexDirection: "row", height: "270px", gap: "4%" }}>
-            {/* Project */}
-            <Project topic={"abdi"} />
-          </div>
-        </div>
-      )}
+        {/* Route for Abdi */}
+        <Route path="abdi" element={<Abdi />} />
 
-      {displayPage === "abdi" && (
-        <Abdi />
-      )}
-
-
-      {displayPage === "abdi_privacy" && (
-        <AbdiPrivacyPolicy />
-      )}
-
-
-
-
-
+        {/* Route for Abdi Privacy Policy */}
+        <Route path="abdi/privacy" element={<AbdiPrivacyPolicy />} />
+      </Routes>
 
     </div>
   );
