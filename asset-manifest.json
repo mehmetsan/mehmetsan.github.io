@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mehmetsan.github.io/static/css/main.74bed2b8.css",
-    "main.js": "/mehmetsan.github.io/static/js/main.d740141d.js",
-    "index.html": "/mehmetsan.github.io/index.html",
-    "main.74bed2b8.css.map": "/mehmetsan.github.io/static/css/main.74bed2b8.css.map",
-    "main.d740141d.js.map": "/mehmetsan.github.io/static/js/main.d740141d.js.map"
+    "main.css": "/static/css/main.74bed2b8.css",
+    "main.js": "/static/js/main.92b6f8fb.js",
+    "index.html": "/index.html",
+    "main.74bed2b8.css.map": "/static/css/main.74bed2b8.css.map",
+    "main.92b6f8fb.js.map": "/static/js/main.92b6f8fb.js.map"
   },
   "entrypoints": [
     "static/css/main.74bed2b8.css",
-    "static/js/main.d740141d.js"
+    "static/js/main.92b6f8fb.js"
   ]
 }
