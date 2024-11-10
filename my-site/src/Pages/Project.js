@@ -1,11 +1,9 @@
 
 import topicsData from "../data.json"
-import React, { useContext } from 'react';
-import { UserContext } from '../index';
+import React from 'react';
 
 function Project({ topic }) {
     const topicData = topicsData[topic]
-    const { baseUrl } = useContext(UserContext);
 
     return (
         <div style={{
@@ -13,7 +11,7 @@ function Project({ topic }) {
             backgroundColor: "#D7E278", borderRadius: "20px", padding: "20px", fontFamily: "'Comic Sans MS', 'Comic Sans', cursive"
         }}
             onClick={() => {
-                window.location.href = baseUrl + '/' + topicData.page;
+                window.location.href = `${process.env.PUBLIC_URL}/#/` + topicData.page
             }}
         >
             {/* Topic Part */}

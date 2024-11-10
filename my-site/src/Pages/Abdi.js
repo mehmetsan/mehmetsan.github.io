@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-import { UserContext } from '../index';
+import React from 'react';
+import { FaAngleLeft } from "react-icons/fa";
 
 function Abdi() {
-    const { baseUrl } = useContext(UserContext);
 
     return (
         <div style={{ display: "flex", flexDirection: "column", marginTop: "10px", backgroundColor: "#f0e09c", borderRadius: "20px" }}>
@@ -17,6 +16,19 @@ function Abdi() {
             <div style={{ display: "flex", flexDirection: "column", gap: "20px", padding: "60px 120px 60px 120px" }}>
                 {/* Description Section */}
                 <div style={{ display: "flex", flexDirection: "column" }}>
+
+                    <div style={{
+                        display: "flex", flexDirection: "row", cursor: "pointer", borderBottom: "2px solid black",
+                        paddingBottom: "2px", width: "60px", marginBottom: "20px"
+                    }}
+                        onClick={() => {
+                            window.location.href = `${process.env.PUBLIC_URL}`
+                        }
+                        }>
+                        <FaAngleLeft style={{ display: "flex", margin: "auto 5px auto 0px" }} />
+                        <span style={{ display: "flex" }}>Back</span>
+                    </div>
+
                     <span style={{ display: "flex", fontWeight: "700", fontSize: "32px", textDecoration: "underline" }}>
                         ABDI Game
                     </span>
@@ -31,7 +43,7 @@ function Abdi() {
                     <span
                         style={{ display: "flex", marginBottom: "20px", color: "blue", fontWeight: "600", cursor: "pointer" }}
                         onClick={() => {
-                            window.location.href = baseUrl + '/abdi/privacy'
+                            window.location.href = `${process.env.PUBLIC_URL}/#/abdi/privacy`
                         }}
                     >
                         Privacy Policy
@@ -45,10 +57,10 @@ function Abdi() {
                         Screenshots
                     </span>
                     <div style={{ display: "flex", flexDirection: "row", gap: "30px" }}>
-                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_1.png"} alt="" />
-                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_2.png"} alt="" />
-                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_3.png"} alt="" />
-                        <img style={{ display: "flex", width: "200px" }} src={baseUrl + "/images/screenshot_4.png"} alt="" />
+                        <img style={{ display: "flex", width: "20%" }} src={`${process.env.PUBLIC_URL}/images/screenshot_1.png`} alt="Screenshot 1" />
+                        <img style={{ display: "flex", width: "20%" }} src={`${process.env.PUBLIC_URL}/images/screenshot_2.png`} alt="Screenshot 2" />
+                        <img style={{ display: "flex", width: "20%" }} src={`${process.env.PUBLIC_URL}/images/screenshot_3.png`} alt="Screenshot 3" />
+                        <img style={{ display: "flex", width: "20%" }} src={`${process.env.PUBLIC_URL}/images/screenshot_4.png`} alt="Screenshot 4" />
                     </div>
                 </div>
 

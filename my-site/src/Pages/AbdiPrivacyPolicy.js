@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaAngleLeft } from "react-icons/fa";
 
 function AbdiPrivacyPolicy() {
     return (
@@ -14,6 +14,18 @@ function AbdiPrivacyPolicy() {
                 <span style={{ display: "flex", margin: "20px auto 20px auto", fontSize: "32px", fontWeight: "600" }}>
                     Abdi Privacy Policy
                 </span>
+
+                <div style={{
+                    display: "flex", flexDirection: "row", cursor: "pointer", borderBottom: "2px solid black",
+                    paddingBottom: "2px", margin: "20px 120px 20px 120px", width: "60px"
+                }}
+                    onClick={() => {
+                        window.location.href = `${process.env.PUBLIC_URL}/#/abdi`
+                    }
+                    }>
+                    <FaAngleLeft style={{ display: "flex", margin: "auto 5px auto 0px" }} />
+                    <span style={{ display: "flex" }}>Back</span>
+                </div>
 
                 {/* Points of Privacy Policy */}
                 <div style={{ display: "flex", flexDirection: "column", padding: "20px 120px 20px 120px" }}>
@@ -114,7 +126,7 @@ function AbdiPrivacyPolicy() {
                         </span>
                         <p style={{ display: "flex", fontSize: "20px", textAlign: "justify" }}>
                             If you have questions, concerns, or suggestions regarding this Privacy Policy,
-                            please contact us at [Your Contact Information].
+                            please contact us at sanisoglumehmet@gmail.com.
                         </p>
                     </div>
                 </div>
